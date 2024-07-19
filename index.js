@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching profile:", error));
   }
 
-  // Function to dynamically display professionals' profile
+  // Function to dynamically display professionals and some of their details
   function displayProfessionals() {
     fetch("http://localhost:3000/professionals")
       .then((response) => response.json())
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching professional:", error));
   };
 
+  // Function to show the professionals' details individually
   function openProfileModal(event) {
     event.preventDefault();
     const professionalId = event.target.getAttribute("data-id");
@@ -114,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
   };
 
-
+// A function that displays the different projects on the website
   function displayProjectTypes() {
     fetch("http://localhost:3000/professionals")
       .then((response) => response.json())
@@ -155,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching data:", error));
   }
 
+  // Function to display post job form when button is clicked on
   function displayPostJobForm() {
     postJobForm.style.display = "flex";
 
@@ -163,9 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
       postJobForm.style.display = "none";
     });
   }
-
   document.querySelectorAll(".post-job-btn").forEach((button) => {button.addEventListener("click", displayPostJobForm);});
 
+  // Function to display signup/login form when button is clicked on
   function displaySignupForm() {
     signupForm.style.display = "flex";
 
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".signup-btn").addEventListener("click", displaySignupForm);
 
-
+// Function to display portfolio form
   function displayAddToPortfolioForm() {
     const updatePortfolio = document.getElementById("add-content-portfolio");
     updatePortfolio.style.display = "block";
@@ -192,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addToPortfolioButtons.forEach((button) => {button.addEventListener("click", displayAddToPortfolioForm);
   });
 
+  // Function to display post new educational article form
   function displayEducationalArticleForm() {
     postEducationalArticle.style.display = "flex";
 
@@ -200,10 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
       postEducationalArticle.style.display = "none";
     });
   };
-
   document.querySelector(".post-article").addEventListener("click", displayEducationalArticleForm);
 
-
+// Function to display available jobs
   function displayAvailableJobs() {
     fetch("http://localhost:3000/job-posts")
       .then((response) => response.json())
@@ -235,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching job:", error));
   };
 
+  // Function to edit content on available jobs
   function editJob(item) {
     const jobCard = document.querySelector(`[data-id="${item.id}"]`).closest(".job-post");
     const titleElement = jobCard.querySelector("h4.job-edit");
@@ -269,6 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => console.error("Error updating job:", error));
 };
 
+// Function to delete content on available jobs
   function deleteJob(id) {
     fetch(`http://localhost:3000/job-posts/${id}`, {
       method: "DELETE",
@@ -280,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => console.error("Error deleting job:", error));
 };
 
-
+// Function to display educational content
   function displayEducationalArticles() {
     fetch("http://localhost:3000/educational-articles")
       .then((response) => response.json())
@@ -310,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching articles:", error));
 };
 
+// Function to edit educational content
   function editArticle(item) {
     const articleCard = document.querySelector(`[data-id="${item.id}"]`).parentNode;
     const titleElement = articleCard.querySelector("h4");
@@ -344,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   .catch((error) => console.error("Error updating article:", error));
 };
 
+// Function to delete educational content
 function deleteArticle(articleId) {
     fetch(`http://localhost:3000/educational-articles/${articleId}`, {
       method: "DELETE",
@@ -355,14 +361,13 @@ function deleteArticle(articleId) {
     .catch(error => console.error("Error deleting article:", error));
 };
 
+// Function to submit post job form info to the server
   function postJobFormSubmit(event) {
     event.preventDefault();
 
     let postedJobTitle = document.getElementById("posted-job-title").value;
     let jobLocation = document.getElementById("job-location").value;
-    let postedJobDescription = document.getElementById(
-      "posted-project-description"
-    ).value;
+    let postedJobDescription = document.getElementById("posted-project-description").value;
     let clientName = document.getElementById("client-name").value;
     let clientEmail = document.getElementById("client-email").value;
 
@@ -385,7 +390,7 @@ function deleteArticle(articleId) {
 
   postJobForm.addEventListener("submit", postJobFormSubmit);
   
-
+// Function to submit signup details to the server
   function signupFormSubmit(event) {
     event.preventDefault();
 
@@ -437,7 +442,7 @@ function deleteArticle(articleId) {
   }
   signupForm.addEventListener("submit", signupFormSubmit);
 
-
+// Function to show the profile of user
   function showUserProfile(user) {
     profileModal.style.display = "block";
 
@@ -510,7 +515,7 @@ function deleteArticle(articleId) {
     });
   });
     
-
+// Function to use login form
   function loginFormSubmit(event) {
     event.preventDefault();
 
@@ -518,6 +523,7 @@ function deleteArticle(articleId) {
     let loginPassword = document.getElementById("login-password");
   }
 
+  // Function to submit update portfolio form
   function updatePortfolioFormSubmit(event) {
     event.preventDefault();
 
@@ -583,6 +589,7 @@ function deleteArticle(articleId) {
   }
   updatePortfolio.addEventListener("submit", updatePortfolioFormSubmit);
 
+  // Function to submit new educational content
   function educationalArticleFormSubmit(event) {
     event.preventDefault();
 
@@ -615,6 +622,7 @@ function deleteArticle(articleId) {
   }
   postEducationalArticle.addEventListener("submit", educationalArticleFormSubmit);
 
+  // Function for the chat feature
   const chatUsers = [
     { id: 1, name: 'User 1', messages: [] },
     { id: 2, name: 'User 2', messages: [] },
@@ -666,7 +674,7 @@ function deleteArticle(articleId) {
       }
   };
 
-  
+  // Functions to enable filtering of various items on the website
   const searchProfessional = () => {
     const professionalSearchBox = document.getElementById("search-professionals").value.toUpperCase();
     professionalsSection;
