@@ -1,0 +1,434 @@
+{
+  "professionals": [
+    {
+      "id": "1",
+      "profileImage": "Images/Professionals images/Professional 04.JPG",
+      "signupName": "Noah Martinez",
+      "userProfession": "Architect",
+      "signupServices": "Urban Planning, Landscape Architecture",
+      "signupEmail": "noahmartinez@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/concept render 2.jpg",
+          "projectTitle": "High-Rise Residential Building",
+          "projectDescription": "A modern high-rise residential building featuring luxury apartments and state-of-the-art amenities."
+        },
+        {
+          "imageUrl": "Images/Projects/concept render 3.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        },
+        {
+          "imageUrl": "Images/Articles/Article 01.jpg",
+          "projectTitle": "Urban Planning Project",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/Family side.jpg",
+          "projectTitle": "Luxury Multi-Family Housing",
+          "projectDescription": "A luxury multi-family housing project with innovative design and premium facilities."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "profileImage": "Images/Professionals images/Professional 09.JPG",
+      "signupName": "Joyce Maina",
+      "userProfession": "Architect",
+      "signupServices": "Architectural and interior design for a holistic experience, creating spaces that inspire and connect.",
+      "signupEmail": "joycemaina@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/modular renders_9 - Photo.jpg",
+          "projectTitle": "The Green Oasis Eco-Resort (Hospitality Architecture)",
+          "projectDescription": "Design a sustainable luxury eco-resort nestled amidst nature, with minimal environmental impact and emphasis on renewable energy sources and local materials."
+        },
+        {
+          "imageUrl": "Images/Projects/Front render 1 revised.jpg",
+          "projectTitle": "Revitalizing Main Street (Commercial Architecture)",
+          "projectDescription": "Design a modern and flexible elementary school that fosters creativity and collaboration, incorporating innovative learning spaces and technology integration."
+        },
+        {
+          "imageUrl": "Images/Projects/Front perspective.jpg",
+          "projectTitle": "Reimagining the Learning Landscape (Educational Architecture)",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/modular renders_3 - Photo.jpg",
+          "projectTitle": "A Home for Generations (Residential Architecture)",
+          "projectDescription": "Design a multi-generational family home that accommodates the needs of all ages, promoting accessibility, privacy, and shared living spaces."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "profileImage": "Images/Professionals images/Company 2.jpg",
+      "signupName": "Living Architecture Ltd",
+      "userProfession": "Architect",
+      "signupServices": "Full-scope architectural and interior design services, custom design for every project stage, expert guidance throughout the process.",
+      "signupEmail": "livingarch@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/back render 1.jpg",
+          "projectTitle": "Beyond the Classroom(Educational Design)",
+          "projectDescription": "Design an engaging and interactive museum experience that caters to all ages, incorporating technology and storytelling to inspire curiosity and learning"
+        },
+        {
+          "imageUrl": "Images/Projects/Perspective front 1.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        },
+        {
+          "imageUrl": "Images/Projects/Interior side.jpg",
+          "projectTitle": "From Campus to Co-Living: Student Housing Redesign (Adaptive Reuse Project)",
+          "projectDescription": "Revitalize a former university campus into modern co-living spaces for students, creating a vibrant and functional environment that promotes community living and well-being"
+        },
+        {
+          "imageUrl": "Images/Projects/Family side.jpg",
+          "projectTitle": "A Microcosm of Community: Community Center & Library (Multi-Purpose Project)",
+          "projectDescription": "Design a modern community center and library that serves as a central hub for social interaction and learning, offering flexible spaces."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "profileImage": "Images/Professionals images/Professional 07.JPG",
+      "signupName": "James Moore",
+      "userProfession": "Architect",
+      "signupServices": "Healthcare Facility Designer with 10 years of experience",
+      "signupEmail": "jamesmoore@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/Front perspective.jpg",
+          "projectTitle": "Reimagining the Learning Landscape (Educational Architecture)",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/Family side.jpg",
+          "projectTitle": "Luxury Multi-Family Housing",
+          "projectDescription": "A luxury multi-family housing project with innovative design and premium facilities."
+        },
+        {
+          "imageUrl": "Images/Projects/concept render 2.jpg",
+          "projectTitle": "High-Rise Residential Building",
+          "projectDescription": "A modern high-rise residential building featuring luxury apartments and state-of-the-art amenities."
+        },
+        {
+          "imageUrl": "Images/Projects/concept render 3.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "profileImage": "Images/Professionals images/Company 2.jpg",
+      "signupName": "Modern Haus Architects",
+      "userProfession": "Architect",
+      "signupServices": "Custom residential architecture, commercial architecture, historic preservation, 3D visualization.",
+      "signupEmail": "modernhaus@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/Perimeter-1-scaled.jpg",
+          "projectTitle": "High-Rise Residential Building",
+          "projectDescription": "A modern high-rise residential building featuring luxury apartments and state-of-the-art amenities."
+        },
+        {
+          "imageUrl": "Images/Projects/Perspective 01 lumion.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        },
+        {
+          "imageUrl": "Images/Projects/Play area 2.JPG",
+          "projectTitle": "Urban Planning Project",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/master bedroom.jpg",
+          "projectTitle": "Luxury Multi-Family Housing",
+          "projectDescription": "A luxury multi-family housing project with innovative design and premium facilities."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "profileImage": "Images/Professionals images/Professional 15.JPG",
+      "signupName": "Avery Adams",
+      "userProfession": "Architect",
+      "signupServices": "Architectural design, construction documentation, permitting assistance, project management, sustainable design solutions.",
+      "signupEmail": "averyadams@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/Front view 1.jpg",
+          "projectTitle": "High-Rise Residential Building",
+          "projectDescription": "A modern high-rise residential building featuring luxury apartments and state-of-the-art amenities."
+        },
+        {
+          "imageUrl": "Images/Projects/Perspective front 1.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        },
+        {
+          "imageUrl": "Images/Projects/concept render 4.jpg",
+          "projectTitle": "Urban Planning Project",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/Interior side.jpg",
+          "projectTitle": "Luxury Multi-Family Housing",
+          "projectDescription": "A luxury multi-family housing project with innovative design and premium facilities."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "profileImage": "Images/Professionals images/Professional 03.JPG",
+      "signupName": "Olivia Wilson",
+      "userProfession": "Interior design",
+      "signupServices": "Modern and contemporary interior design, sustainable building practices, energy-efficient design, adaptive reuse projects.",
+      "signupEmail": "oliviawilson@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/1 br lounge.jpg",
+          "projectTitle": "Modernizing a Victorian Gem (Residential Interior Design)",
+          "projectDescription": "Breathe new life into a Victorian-era home, preserving its architectural details while incorporating modern finishes, furniture, and lighting for a timeless and functional space"
+        },
+        {
+          "imageUrl": "Images/Projects/Restaurant interior revised.jpg",
+          "projectTitle": "Creating a Culinary Canvas (Restaurant Interior Design)",
+          "projectDescription": "Design the interior of a new restaurant that reflects the cuisine and brand identity, creating a memorable dining experience for guests."
+        },
+        {
+          "imageUrl": "Images/Projects/Cafe and lounge.jpg",
+          "projectTitle": "Biophilic Design for Wellbeing (Office Interior Design)",
+          "projectDescription": "Foster a healthy and productive work environment in an office space through biophilic design principles, incorporating nature-inspired elements and promoting employee well-being."
+        },
+        {
+          "imageUrl": "Images/Projects/3 bedroom 2 levels.jpg",
+          "projectTitle": "Luxurious Escape: Boutique Hotel (Hospitality Interior Design)",
+          "projectDescription": "Design the interior of a luxury boutique hotel that exudes elegance and comfort, creating intimate spaces with high-quality finishes and personalized touches."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "profileImage": "Images/Professionals images/Professional 12.JPG",
+      "signupName": "Benjamin Lewis",
+      "userProfession": "Interior design",
+      "signupServices": "Office Space Planning and design",
+      "signupEmail": "benjaminlewis@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/3 bedroom 2 levels.jpg",
+          "projectTitle": "Luxurious Escape: Boutique Hotel (Hospitality Interior Design)",
+          "projectDescription": "Design the interior of a luxury boutique hotel that exudes elegance and comfort, creating intimate spaces with high-quality finishes and personalized touches."
+        },
+        {
+          "imageUrl": "Images/Projects/Restaurant interior revised.jpg",
+          "projectTitle": "Creating a Culinary Canvas (Restaurant Interior Design)",
+          "projectDescription": "Design the interior of a new restaurant that reflects the cuisine and brand identity, creating a memorable dining experience for guests."
+        },
+        {
+          "imageUrl": "Images/Projects/Cafe and lounge.jpg",
+          "projectTitle": "Biophilic Design for Wellbeing (Office Interior Design)",
+          "projectDescription": "Foster a healthy and productive work environment in an office space through biophilic design principles, incorporating nature-inspired elements and promoting employee well-being."
+        },
+        {
+          "imageUrl": "Images/Projects/1 br lounge.jpg",
+          "projectTitle": "Modernizing a Victorian Gem (Residential Interior Design)",
+          "projectDescription": "Breathe new life into a Victorian-era home, preserving its architectural details while incorporating modern finishes, furniture, and lighting for a timeless and functional space"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "profileImage": "Images/Professionals images/Professional 02.JPG",
+      "signupName": "Curated Spaces Ltd",
+      "userProfession": "Interior design",
+      "signupServices": "Storytelling through interior design, bespoke furniture and finishes, art and accessory curation, personalized design concepts.",
+      "signupEmail": "curatedspaces@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/2 br lounge.jpg",
+          "projectTitle": "High-Rise Residential Building",
+          "projectDescription": "A modern high-rise residential building featuring luxury apartments and state-of-the-art amenities."
+        },
+        {
+          "imageUrl": "Images/Projects/Library interior 1.jpg",
+          "projectTitle": "Mixed-Use Development",
+          "projectDescription": "A mixed-use development combining retail spaces, offices, and residential units in a vibrant urban setting."
+        },
+        {
+          "imageUrl": "Images/Projects/Doctors plaza consultation room.png",
+          "projectTitle": "Urban Planning Project",
+          "projectDescription": "Comprehensive urban planning project focusing on sustainable development and community integration."
+        },
+        {
+          "imageUrl": "Images/Projects/modular renders_10 - Photo.jpg",
+          "projectTitle": "Luxury Multi-Family Housing",
+          "projectDescription": "A luxury multi-family housing project with innovative design and premium facilities."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "profileImage": "Images/Professionals images/Professional 16.JPG",
+      "signupName": "Pixel Perfect Interiors",
+      "userProfession": "Interior design",
+      "signupServices": "Online interior design consultations, 3D renderings and virtual tours, remote project management, furniture and decor sourcing.",
+      "signupEmail": "interior@gmail.com",
+      "portfolioImages": [
+        {
+          "imageUrl": "Images/Projects/Chapel 1.jpg",
+          "projectTitle": "Breathing New Life into the Past: Revitalizing a Historic Theater (Adaptive Reuse)",
+          "projectDescription": "Restore and repurpose a historic theater into a vibrant community space, preserving its architectural heritage"
+        },
+        {
+          "imageUrl": "Images/Projects/modular renders_7 - Photo.jpg",
+          "projectTitle": "A Tiny Haven: Design for a Micro-Dwelling (Residential Interior Design)",
+          "projectDescription": "Maximize functionality and create a comfortable living space within a tiny house or micro-apartment, utilizing innovative furniture solutions and storage strategies."
+        },
+        {
+          "imageUrl": "Images/Projects/office space.jpg",
+          "projectTitle": "Work, Play, Connect: The Modern Coworking Space (Office Interior Design)",
+          "projectDescription": "Design a dynamic coworking space that caters to different work styles and fosters collaboration. Include features like flexible work areas, common spaces for relaxation and interaction, and amenities that support productivity and well-being."
+        },
+        {
+          "imageUrl": "Images/Projects/DOCTORS PLAZA WAITING AREA 1.png",
+          "projectTitle": "Redesign of the interior of a health center",
+          "projectDescription": "Design a vertical farm that utilizes limited space efficiently to grow fresh produce locally, promoting sustainable food production within an urban environment."
+        }
+      ]
+    },
+    {
+      "id": "760f",
+      "profileImage": "Images/Professionals images/Professional 11.JPG",
+      "signupName": "Caleb Karimi",
+      "userProfession": "Architect",
+      "signupServices": "I focus on sustainable residential spaces",
+      "signupEmail": "calebkarimi@gmail.com",
+      "signupPassword": "12345",
+      "portfolioImages": []
+    }
+  ],
+  "job-posts": [
+    {
+      "postedJobTitle": "Architectual Design, CAD Drawing, and Interior Design Assistant",
+      "jobLocation": "Nairobi, Kenya",
+      "postedJobDescription": "Interior Designer looking for design assistant to support on case by case basis. Potential to grow into more regular basis and possible full time next year. Requirement: - familiar with building code requirements - able to research needed information at various city entities - familiar and has copies of AutoCAD and 3D softwares",
+      "clientName": "Emma Johnson",
+      "clientEmail": "emma.johnson@example.com",
+      "id": "c3ea"
+    },
+    {
+      "postedJobTitle": "Sketchup and Layout Expert for Wood Construction Extension",
+      "jobLocation": "Eldoret, Kenya",
+      "postedJobDescription": "We are a company specialized in wood frame house extensions. We look for a partner in first step to: - Draw the current houses on SketchUp thanks to a plan and current houses pictures Then, in step 2 : - Lay the “SketchUp” out by creating the walls and roof thickness - Ad the materials - Ad some objects “enscape” in priority then “3D warehouse” if needed. - Create the “layout” We supply a file with the whole layout instructions. You have to ad the scenes in SketchUp then update the layout and the sides. We handle the insertion of the technical informations. If we are satisfied by your offer, this mission will be regular (about once mission a week).",
+      "clientName": "GreenSpaces Ltd",
+      "clientEmail": "info@greenspaces.com",
+      "id": "a283"
+    },
+    {
+      "postedJobTitle": "3D Modeling and Rendering for 5000sqft House Interior",
+      "jobLocation": "Kampala, Uganda",
+      "postedJobDescription": "Needs to hire 2 Freelancers We are looking for a skilled 3D artist to create a realistic and high-quality 3D model and renderings of the interior of a 5000sqft house. The deliverables will include a detailed 3D model and photo-realistic renderings that showcase the design and layout of the house. The ideal candidate should have experience in architectural visualization and be proficient in using software such as 3ds Max, SketchUp. Attention to detail and the ability to accurately replicate the materials, textures, and lighting are essential. Good communication skills and the ability to work within deadlines are also required.",
+      "clientName": "EcoDesign Group",
+      "clientEmail": "hello@ecodesigngroup.com",
+      "id": "ad5d"
+    },
+    {
+      "postedJobTitle": "Architect/Interior Designer for Co-working Space Concept Design",
+      "jobLocation": "Nairobi, Kenya",
+      "postedJobDescription": "Project Description: We are seeking a skilled Architect or Interior Designer to create a comprehensive layout for a 111m² co-working space. This project is crucial for our feasibility planning phase and aims to develop an engaging, functional, and innovative co-working environment.",
+      "clientName": "Urban Innovators Inc",
+      "clientEmail": "contact@urbaninnovators.com",
+      "id": "b64c"
+    },
+    {
+      "postedJobTitle": "3D interior design",
+      "jobLocation": "Accra, Ghana",
+      "postedJobDescription": "I have a client that has real estate and he would to design the interior of his apartment. Please mention any experience you have with examples of apartments you have designed.",
+      "clientName": "William Moore",
+      "clientEmail": "william.moore@example.com",
+      "id": "aa78"
+    },
+    {
+      "postedJobTitle": "Architectural Project Manager",
+      "jobLocation": "New York, USA",
+      "postedJobDescription": "Oversee architectural projects from initial concept to completion. Manage budgets, timelines, and ensure client satisfaction while coordinating with team members. Requires strong leadership, communication, and project management skills.",
+      "clientName": "Mia Thomas",
+      "clientEmail": "mia.thomas@example.com",
+      "id": "48d2"
+    },
+    {
+      "postedJobTitle": "Building Code Analyst",
+      "jobLocation": "Johannesburg, South Africa",
+      "postedJobDescription": "Review architectural plans and specifications for code compliance, ensuring adherence to building safety and accessibility regulations. Requires a deep understanding of building codes and strong analytical skills.",
+      "clientName": "Sophia Taylor",
+      "clientEmail": "sophia.taylor@example.com",
+      "id": "08d1"
+    },
+    {
+      "postedJobTitle": "Kitchen & Bath Designer",
+      "jobLocation": "Dar es Saalam, Tanzania",
+      "postedJobDescription": "Design and plan stylish and functional kitchens and bathrooms. Consider client needs, space limitations, and budget. Strong knowledge of plumbing fixtures, cabinetry, kitchen appliances, and bathroom layouts is a plus.",
+      "clientName": "ModernLiving Co",
+      "clientEmail": "support@modernliving.com",
+      "id": "4a76"
+    },
+    {
+      "postedJobTitle": "Color Consultant",
+      "jobLocation": "Kigali, Rwanda",
+      "postedJobDescription": "Advise clients on color palettes for architectural and interior design projects, considering psychology, space perception, and overall design aesthetic. Requires a keen eye for color and knowledge of color theory.",
+      "clientName": "Inspire Designs",
+      "clientEmail": "service@inspiredesigns.com",
+      "id": "c402"
+    },
+    {
+      "postedJobTitle": "Healthcare Architect",
+      "jobLocation": "Madrid, Spain",
+      "postedJobDescription": "Design functional and patient-centered healthcare facilities, considering safety, infection control, and user experience. Requires understanding of healthcare regulations and specific needs of different healthcare environments.",
+      "clientName": "Visionary Hospital",
+      "clientEmail": "connect@visionaryhospital.com",
+      "id": "b599"
+    },
+    {
+      "id": "8f20",
+      "postedJobTitle": "Furniture Designer",
+      "jobLocation": "Nairobi, Kenya",
+      "postedJobDescription": "Design and develop functional and aesthetically pleasing furniture pieces, considering ergonomics, user needs, and manufacturing feasibility. Creativity, strong design sense, and understanding of furniture construction methods are essential.",
+      "clientName": "James Anderson",
+      "clientEmail": "james.anderson@example.com"
+    }
+  ],
+  "educational-articles": [
+    {
+      "newArticleImage": "Images/Articles/Article 01.jpg",
+      "newArticleTitle": "Sustainable Design: Building for a Greener",
+      "newArticleDescription": "Discover the principles of sustainable architecture and design, and how you can incorporate eco-friendly practices into your projects.",
+      "newArticleContent": "",
+      "id": "786a"
+    },
+    {
+      "newArticleImage": "Images/Articles/Article 02.jpg",
+      "newArticleTitle": "Top Trends in Modern Interior Design",
+      "newArticleDescription": "Stay updated with the latest trends in interior design, including popular styles, materials, and technologies shaping the industry today.",
+      "newArticleContent": "",
+      "id": "0793"
+    },
+    {
+      "newArticleImage": "Images/Articles/Article 03.jpg",
+      "newArticleTitle": "The Role of an Architect in the Construction Process",
+      "newArticleDescription": "Understand the various responsibilities and tasks an architect undertakes during a construction project, from initial concept to final completion.",
+      "newArticleContent": "",
+      "id": "baa2"
+    },
+    {
+      "newArticleImage": "Images/Articles/Article 05.jpg",
+      "newArticleTitle": "Budgeting for Your Home Renovation: Tips and Tricks",
+      "newArticleDescription": "Get practical advice on how to create a realistic budget for your home renovation, manage costs, and avoid common financial pitfalls.",
+      "newArticleContent": "",
+      "id": "9cf3"
+    }
+  ]
+}
