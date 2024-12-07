@@ -16,393 +16,411 @@
   </head>
 
   <body>
-    <header>
-      <h2>MUSEMATCH</h2>
-      <a href="#hero-section">Home</a>
-      <a href="#professionals">Professionals</a>
-      <a href="#projects">Projects</a>
-      <a href="#posted-jobs">Jobs</a>
-      <a href="#educational-section">Education</a>
-      <a href="#cta-form">Contact Us</a>
-      <button class="signup-btn">Login/Signup</button>  
-      
-    </header>
 
-    <div id="hero-section">
-      <div id="hero-section-content">
-        <h1>Hi Caleb!</h1>
-        <h3>Discover Excellence with MuseMatch</h3>
-        <h4>Connecting Design Professionals with Clients Seamlessly</h4>
-        <div id="hero-section-btns">
-          <button class="post-job-btn">Post a Job</button>
+    <div id="user-authentication">
+      <form action="" id="signup-form">
+        <h4>Signup</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <input type="text" id="signup-name" placeholder="Enter your name" class="professional-name"/>
+        <input type="email" id="signup-email" placeholder="Enter email" />
+        <input type="password" id="signup-password" placeholder="Enter password" />
+        <input type="password" id="signup-reEnter-password" placeholder="Re-enter password" />
+        <input type="text" id="signup-profile-photo" placeholder="Enter profile photo link" class="professional-dp">
+        <input type="text" id="signup-profession" placeholder="Enter your profession" class="profession-about">
+        <input type="text" id="signup-services" placeholder="Enter the services you offer" class="profession-services">
+        
+        <div class="signup-btn-field">
+          <button class="submit-signup-form" id="signup-btn">Sign Up</button>
+          <p class="userAuth-redirect">Have an account?</p>
+          <button class="disable" id="signin-btn">Sign In</button>
         </div>
-      </div>
-      
-      <div id="why-musematch">
-        <h5>Why choose MuseMatch?</h5>
-        <div id="why-musematch-content">
-          <div class="musematch-values">
-            <img src="Images/Design expert connections2.jpg" alt="">
-            <p>Design Expert Connections</p>
-          </div>
-          <div class="musematch-values">
-            <img src="Images/Seamless matching.jpg" alt="">
-            <p>Seamless Matching Process</p>
-          </div>
-          <div class="musematch-values">
-            <img src="Images/Transparent vector.jpg" alt="">
-            <p>Transparent & Trustworthy</p>
-          </div>
-          <div class="musematch-values">
-            <img src="Images/eductaional content.jpg" alt="">
-            <p>Comprehensive Educational Resources</p>
+      </form>
+
+      <form action="" id="logIn-form">
+        <h4>Log In</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <input type="text" id="login-email" placeholder="Enter email">
+        <input type="text" id="login-password" placeholder="Enter password">
+        <div id="login-btns">
+          <button id="login-submit">Log In</button>
+          <p class="userAuth-redirect2">Don't have an account?</p>
+          <button class="disable" id="signup-redirect-btn">Sign up here</button>
+        </div>
+      </form>
+
+    </div>
+    
+
+    <div id="website-content">
+
+      <header>
+        <h2>MUSEMATCH</h2>
+        <div class="menu-container">
+          <a href="#hero-section">Home</a>
+          <a href="#professionals">Professionals</a>
+          <a href="#projects">Projects</a>
+          <a href="#posted-jobs">Jobs</a>
+          <a href="#educational-section">Education</a>
+          <a href="#cta-form">Contact Us</a>
+          <button class="signup-btn">Login/Signup</button>
+          <button id="user-profile-btn">Your Profile</button>
+        </div>
+        <div class="hamburger" id="hamburger-icon">
+          &#9776;
+        </div>
+        
+      </header>
+  
+      <div id="hero-section">
+        <div id="hero-section-content">
+          <h1>Welcome!</h1>
+          <h3>Discover Excellence with MuseMatch</h3>
+          <h4>Connecting Design Professionals with Clients Seamlessly</h4>
+          <div id="hero-section-btns">
+            <button class="post-job-btn">Post a Job</button>
           </div>
         </div>
         
-      </div>
-    </div>
-
-    <div id="chat-users">
-      <h2>Chat Users</h2>
-      <ul id="user-list">
-          
-      </ul>
-  </div>
-
-  <div id="chat-modal" class="modal">
-      <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <h2 id="chat-header">Chat with </h2>
-          <div id="message-history">
-              
+        <div id="why-musematch">
+          <h5>Why choose MuseMatch?</h5>
+          <div id="why-musematch-content">
+            <div class="musematch-values">
+              <img src="Images/Design expert connections2.jpg" alt="">
+              <p>Design Expert Connections</p>
+            </div>
+            <div class="musematch-values">
+              <img src="Images/Seamless matching.jpg" alt="">
+              <p>Seamless Matching Process</p>
+            </div>
+            <div class="musematch-values">
+              <img src="Images/Transparent vector.jpg" alt="">
+              <p>Transparent & Trustworthy</p>
+            </div>
+            <div class="musematch-values">
+              <img src="Images/eductaional content.jpg" alt="">
+              <p>Comprehensive Educational Resources</p>
+            </div>
           </div>
-          <form id="message-form">
-              <input type="text" id="message-input" placeholder="Type your message" required>
-              <button type="submit">Send</button>
+          
+        </div>
+      </div>
+  
+      <div id="chat-users">
+        <h2>Chat Users</h2>
+        <ul id="user-list">
+            
+        </ul>
+    </div>
+  
+    <div id="chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="chat-header">Chat with </h2>
+            <div id="message-history">
+                
+            </div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type your message" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+  
+      <div id="professionals">
+  
+        <div id="professionals-filter-options">
+          <h2>Meet Our Professionals</h2>
+          <form id="professionals-search-form">
+            <input type="text" id="search-professionals" placeholder="Search Professionals" onkeyup="searchProfessional()">
+            <i class="fas fa-search"></i>
           </form>
-      </div>
-  </div>
-
-    <div id="professionals">
-
-      <div id="professionals-filter-options">
-        <h2>Meet Our Professionals</h2>
-        <form id="professionals-search-form">
-          <input type="text" id="search-professionals" placeholder="Search Professionals" onkeyup="searchProfessional()">
-          <i class="fas fa-search"></i>
-        </form>
-      </div>
-      <div id="professionals-results">
-
-          <div class="professional-card">
-            <img src="Images/Professionals images/Professional 04.JPG" alt="">
-            <div class="professional-info">
+        </div>
+        <div id="professionals-results">
+  
+            <div class="professional-card">
+              <img src="Images/Professionals images/Professional 04.JPG" alt="">
+              <div class="professional-info">
+                <h4>Professional name</h4>
+                <h5>Architect</h5>
+                <h6>Services</h6>
+                <button>View profile</button>
+              </div>
+            </div>
+  
+  
+          <div class="interior-designers-results">
+            <div class="professional-card">
+              <img src="Images/Professionals images/Professional 01.JPG" alt="">
               <h4>Professional name</h4>
-              <h5>Architect</h5>
+              <h5>Interior designer</h5>
               <h6>Services</h6>
               <button>View profile</button>
             </div>
+  
+            <div class="professional-card">
+              <img src="Images/Professionals images/Professional 05.JPG" alt="">
+              <h4>Professional name</h4>
+              <h5>Interior designer</h5>
+              <h6>Services</h6>
+              <button>View profile</button>
+            </div>
+  
           </div>
-
-
-        <div class="interior-designers-results">
-          <div class="professional-card">
-            <img src="Images/Professionals images/Professional 01.JPG" alt="">
-            <h4>Professional name</h4>
-            <h5>Interior designer</h5>
-            <h6>Services</h6>
-            <button>View profile</button>
-          </div>
-
-          <div class="professional-card">
-            <img src="Images/Professionals images/Professional 05.JPG" alt="">
-            <h4>Professional name</h4>
-            <h5>Interior designer</h5>
-            <h6>Services</h6>
-            <button>View profile</button>
-          </div>
-
+          
         </div>
-        
+  
+        <div id="professional-modal">
+          <div class="professional-modal-content">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+            <div id="professional-profile-modal">
+              <div id="profile-part1">
+                <img src="Images/Professionals images/Professional 03.JPG" alt="">
+                <div class="profile-text">
+                  <h4>Professionjson-server --watch db. jsonal Name</h4>
+                  <h5>Profession</h5>
+                  <p>Services</p>
+                  <button id="portfolio-message-btn">Message professional</button>
+                </div>
+              </div>
+              <div id="profile-part2">
+                <div class="portfolio">
+                  <img src="Images/Projects/concept render 2.jpg" alt="">
+                  <h5>Mixed use developemnt project</h5>
+                  <p>This type of development promotes a vibrant, sustainable community by providing residents and visitors with a convenient blend of living, working, shopping, and leisure opportunities in one location. </p>
+                </div>
+                <div class="portfolio">
+                  <img src="Images/Projects/Interior side.jpg" alt="">
+                  <h5>Affordable housing project</h5>
+                  <p>A residential building designed to provide comfortable, modern living spaces for individuals and families. This project features a variety of unit types, from cozy studios to spacious multi-bedroom apartments, all equipped with high-quality finishes and contemporary amenities. </p>
+                </div>
+                
+              </div> 
+              
+            </div>
+          </div>
+        </div>
+  
       </div>
-
-      <div id="professional-modal">
-        <div class="professional-modal-content">
-          <button type="button" class="btn-close" aria-label="Close"></button>
+  
+      <div id="professional-profile-modal">
+        <div class="profile-modal-content">
+          <h4>Your Profile</h4>
+          <button type="button" class="btn-close" id="btn-profile-close" aria-label="Close"></button>
           <div id="professional-profile-modal">
-            <div id="profile-part1">
+            <div id="profile-prt1">
               <img src="Images/Professionals images/Professional 03.JPG" alt="">
               <div class="profile-text">
-                <h4>Professionjson-server --watch db. jsonal Name</h4>
+                <h4>Professional Name</h4>
                 <h5>Profession</h5>
                 <p>Services</p>
-                <button id="portfolio-message-btn">Message professional</button>
               </div>
+              <button class = "edit-profile-btn">Edit Profile</button>
+              <button class = "delete-profile-btn">Delete profile</button>
             </div>
-            <div id="profile-part2">
-              <div class="portfolio">
+            <div id="profile-prt2">
+              <div class="profile-portfolio">
                 <img src="Images/Projects/concept render 2.jpg" alt="">
                 <h5>Mixed use developemnt project</h5>
                 <p>This type of development promotes a vibrant, sustainable community by providing residents and visitors with a convenient blend of living, working, shopping, and leisure opportunities in one location. </p>
               </div>
-              <div class="portfolio">
+              <div class="profile-portfolio">
                 <img src="Images/Projects/Interior side.jpg" alt="">
                 <h5>Affordable housing project</h5>
                 <p>A residential building designed to provide comfortable, modern living spaces for individuals and families. This project features a variety of unit types, from cozy studios to spacious multi-bedroom apartments, all equipped with high-quality finishes and contemporary amenities. </p>
               </div>
-              
             </div> 
-            
+            <button class = "logout-btn">Logout</button>
           </div>
         </div>
       </div>
-
+  
     </div>
-
-    <div id="professional-profile-modal">
-      <div class="profile-modal-content">
-        <button type="button" class="btn-close" id="btn-profile-close" aria-label="Close"></button>
-        <div id="professional-profile-modal">
-          <div id="profile-prt1">
-            <img src="Images/Professionals images/Professional 03.JPG" alt="">
-            <div class="profile-text">
-              <h4>Professional Name</h4>
-              <h5>Profession</h5>
-              <p>Services</p>
-            </div>
+  
+      <div id="projects">
+        <div id="project-types">
+          <h2>Explore Project Types</h2>
+          <form id="project-type-search-form">
+            <input type="text" id="search-project-type" placeholder="Search Project Type" onkeyup="searchProjectType()">
+            <i class="fas fa-search"></i>
+          </form>
+        </div>
+        
+        <div id="project-type-results">
+          <div class="project-card">
+            <img src="Images/Projects/Front render 1 revised.jpg" alt="">
+            <h4>Commercial building</h4>
+            <h5>Project description</h5>
+            <p>Account name</p>
           </div>
-          <div id="profile-prt2">
-            <div class="profile-portfolio">
-              <img src="Images/Projects/concept render 2.jpg" alt="">
-              <h5>Mixed use developemnt project</h5>
-              <p>This type of development promotes a vibrant, sustainable community by providing residents and visitors with a convenient blend of living, working, shopping, and leisure opportunities in one location. </p>
-            </div>
-            <div class="profile-portfolio">
-              <img src="Images/Projects/Interior side.jpg" alt="">
-              <h5>Affordable housing project</h5>
-              <p>A residential building designed to provide comfortable, modern living spaces for individuals and families. This project features a variety of unit types, from cozy studios to spacious multi-bedroom apartments, all equipped with high-quality finishes and contemporary amenities. </p>
-            </div>
-          </div> 
-          <button class = "edit-profile-btn">Edit Profile</button>
-          <button class = "delete-profile-btn">Delete profile</button>
+  
+          <div class="project-card">
+            <img src="Images/Projects/Interior side.jpg" alt="">
+            <h4>Affordable housing</h4>
+            <h5>Project description</h5>
+          </div>
         </div>
       </div>
-    </div>
-
-  </div>
-
-    <div id="projects">
-      <div id="project-types">
-        <h2>Explore Project Types</h2>
-        <form id="project-type-search-form">
-          <input type="text" id="search-project-type" placeholder="Search Project Type" onkeyup="searchProjectType()">
+  
+      <div id="posted-jobs">
+        <h2>Available Jobs</h2>
+        <form id="job-search-form">
+          <input type="text" id="search-job" placeholder="Search Job" onkeyup="searchPostedJob()">
           <i class="fas fa-search"></i>
         </form>
-      </div>
-      
-      <div id="project-type-results">
-        <div class="project-card">
-          <img src="Images/Projects/Front render 1 revised.jpg" alt="">
-          <h4>Commercial building</h4>
-          <h5>Project description</h5>
-          <p>Account name</p>
-        </div>
-
-        <div class="project-card">
-          <img src="Images/Projects/Interior side.jpg" alt="">
-          <h4>Affordable housing</h4>
-          <h5>Project description</h5>
-        </div>
-      </div>
-    </div>
-
-    <div id="posted-jobs">
-      <h2>Available Jobs</h2>
-      <form id="job-search-form">
-        <input type="text" id="search-job" placeholder="Search Job" onkeyup="searchPostedJob()">
-        <i class="fas fa-search"></i>
-      </form>
-
-      <div id="posted-jobs-available">
-        <div class="job-post">
-          <h4>Architectual Design, CAD Drawing, and Interior Design Assistant</h4>
-          <p>Interior Designer looking for design assistant to support on case by case basis.  Potential to grow into more regular basis and possible full time next year.
-
-            Requirement:
-            - familiar with building code requirements
-            - able to research needed information at various city entities
-            - familiar and has copies of AutoCAD and 3D softwares</p>
-          <h6>Client name</h6>
-          <p>Email</p>
-        </div>
-
-        <div class="job-post">
-          <div class="job-header">
-            <h4>3D interior design</h4>
-            <p>Nairobi, Kenya</p>
+  
+        <div id="posted-jobs-available">
+          <div class="job-post">
+            <h4>Architectual Design, CAD Drawing, and Interior Design Assistant</h4>
+            <p>Interior Designer looking for design assistant to support on case by case basis.  Potential to grow into more regular basis and possible full time next year.
+  
+              Requirement:
+              - familiar with building code requirements
+              - able to research needed information at various city entities
+              - familiar and has copies of AutoCAD and 3D softwares</p>
+            <h6>Client name</h6>
+            <p>Email</p>
           </div>
-          
-          <p>I have a client that has real estate and he would to design the interior of his apartment.
-
-            Please mention any experience you have with examples of apartments you have designed.</p>
-          <h6>Client name</h6>
-          <p>Email</p>
-        </div>
-
-      </div>
-      <button class="post-job-btn">Post Job</button>
-    </div>
-
-    <div id="educational-section">
-      <h2>Learn with Us</h2>
-      <div id="educational-articles">
-        <div id="articles-title">
-          <h3>Articles</h3>
-        </div>
-        <div id="article-content">
-          <div id="article">
-            <img src="Images/Articles/Article 01.jpg" alt="" />
-            <h4>Sustainable Design: Building for a Greener Future</h4>
-            <p>Discover the principles of sustainable architecture and design, and how you can incorporate eco-friendly practices into your projects.</p>
-            <button>Read More</button>
+  
+          <div class="job-post">
+            <div class="job-header">
+              <h4>3D interior design</h4>
+              <p>Nairobi, Kenya</p>
+            </div>
+            
+            <p>I have a client that has real estate and he would to design the interior of his apartment.
+  
+              Please mention any experience you have with examples of apartments you have designed.</p>
+            <h6>Client name</h6>
+            <p>Email</p>
           </div>
-             
+  
+        </div>
+        <button class="post-job-btn">Post Job</button>
+      </div>
+  
+      <div id="educational-section">
+        <h2>Learn with Us</h2>
+        <div id="educational-articles">
+          <div id="articles-title">
+            <h3>Articles</h3>
+          </div>
+          <div id="article-content">
+            <div id="article">
+              <img src="Images/Articles/Article 01.jpg" alt="" />
+              <h4>Sustainable Design: Building for a Greener Future</h4>
+              <p>Discover the principles of sustainable architecture and design, and how you can incorporate eco-friendly practices into your projects.</p>
+              <button>Read More</button>
+            </div>
+               
+          </div>
+        </div>
+        <div id="post-article-btn-body">
+          <button class="post-article">Post an article</button>
+        </div>
+  
+        <div id="educational-faqs">
+          <h3>FAQs</h3>
+          <div id="faq-question">
+            
+            <p><strong>How do I choose the right design professional for my project?</strong></p>
+            <p>Start by browsing through the profiles and portfolios of various professionals. Look for those who have experience in projects similar to yours and check their client reviews. You can also schedule a consultation to discuss your project in detail and assess their compatibility with your vision.</p>
+          </div>
+          <div id="faq-question">
+            <p><strong>What should I include in my project brief when seeking a design professional?</strong></p>
+            <p>Your project brief should include details such as the scope of the project, your budget, preferred style or theme, any specific requirements or constraints, and a timeline. Providing clear and detailed information helps professionals understand your needs and provide accurate proposals.</p>
+          </div>
+          <div id="faq-question">
+            <p><strong>How much does it cost to hire a design professional for a project?</strong></p>
+            <p>Design professionals set their own rates, so the cost will vary depending on the project scope, experience level, and location. </p>
+          </div>
+          <div id="faq-question">
+            <p><strong>How do I get started?</strong></p>
+            <p>Simply create a free account on our platform. You can then browse design professionals, post your project, or contact individual profiles based on your needs.</p>
+          </div>
+          <div id="faq-question">
+            <p><strong>What should I expect during the design process?</strong></p>
+            <p>The design process usually involves initial consultations, concept development, design proposals, revisions based on your feedback, and finalization of the design. Once you approve the design, the professional may also assist with implementation or oversee the project’s execution.</p>
+          </div>
+          <div id="faq-question">
+            <p><strong>What if I’m not satisfied with the final design?</strong></p>
+            <p>If you’re not satisfied with the final design, first discuss your concerns with the professional to see if adjustments can be made. If the issue remains unresolved, our platform’s support team can assist in mediating the situation to find a satisfactory resolution.</p>
+          </div>
         </div>
       </div>
-      <div id="post-article-btn-body">
-        <button class="post-article">Post an article</button>
+  
+      <div id="cta">
+        <form action="" id="cta-form">
+          <h3>Get In Touch</h3>
+          <p>Have Questions? Reach Out to Our Expert Team Today!</p>
+          <input type="text" id="cta-name" placeholder="Name" />
+          <input type="text" -d="cta-email" placeholder="Enter email" />
+          <input type="text" id="cta-message" placeholder="Type message here" />
+          <button>Submit</button>
+        </form>
       </div>
-
-      <div id="educational-faqs">
-        <h3>FAQs</h3>
-        <div id="faq-question">
-          
-          <p><strong>How do I choose the right design professional for my project?</strong></p>
-          <p>Start by browsing through the profiles and portfolios of various professionals. Look for those who have experience in projects similar to yours and check their client reviews. You can also schedule a consultation to discuss your project in detail and assess their compatibility with your vision.</p>
-        </div>
-        <div id="faq-question">
-          <p><strong>What should I include in my project brief when seeking a design professional?</strong></p>
-          <p>Your project brief should include details such as the scope of the project, your budget, preferred style or theme, any specific requirements or constraints, and a timeline. Providing clear and detailed information helps professionals understand your needs and provide accurate proposals.</p>
-        </div>
-        <div id="faq-question">
-          <p><strong>How much does it cost to hire a design professional for a project?</strong></p>
-          <p>Design professionals set their own rates, so the cost will vary depending on the project scope, experience level, and location. </p>
-        </div>
-        <div id="faq-question">
-          <p><strong>How do I get started?</strong></p>
-          <p>Simply create a free account on our platform. You can then browse design professionals, post your project, or contact individual profiles based on your needs.</p>
-        </div>
-        <div id="faq-question">
-          <p><strong>What should I expect during the design process?</strong></p>
-          <p>The design process usually involves initial consultations, concept development, design proposals, revisions based on your feedback, and finalization of the design. Once you approve the design, the professional may also assist with implementation or oversee the project’s execution.</p>
-        </div>
-        <div id="faq-question">
-          <p><strong>What if I’m not satisfied with the final design?</strong></p>
-          <p>If you’re not satisfied with the final design, first discuss your concerns with the professional to see if adjustments can be made. If the issue remains unresolved, our platform’s support team can assist in mediating the situation to find a satisfactory resolution.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="cta">
-      <form action="" id="cta-form">
-        <h3>Get In Touch</h3>
-        <p>Have Questions? Reach Out to Our Expert Team Today!</p>
-        <input type="text" id="cta-name" placeholder="Name" />
-        <input type="text" -d="cta-email" placeholder="Enter email" />
-        <input type="text" id="cta-message" placeholder="Type message here" />
-        <button>Submit</button>
+  
+      <form action="" id="post-job-form">
+        <h4>Post A Job</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+  
+        <select class="form-select" id="professional-for-job" aria-label="Default select example">
+          <option value="" selected disabled>Professional</option>
+          <option value="1">Architect</option>
+          <option value="2">Interior designer</option>
+        </select>
+        <select class="form-select" id="=project-type-desired" aria-label="Default select example">
+          <option value="" selected disabled>Project Type</option>
+          <option value="1">Residential</option>
+          <option value="2">Commercial</option>
+          <option value="3">Office space</option>
+          <option value="4">Mixed Use</option>
+          <option value="5">Educational facility</option>
+          <option value="6">Health facility</option>
+        </select>
+  
+        <input type="text" id="posted-job-title" placeholder="Enter project title" required>
+        <input type="text" id="posted-project-description" placeholder="Type Description here" required>
+        <input type="text" id="client-name" placeholder = "Enter client name" required>
+        <input type="email" id="client-email" placeholder = "Enter contact email" required>
+        <input type="text" id="job-location" placeholder="Job location" required>
+        <button class="submit-job-form">Submit</button>
       </form>
-    </div>
-
-    <form action="" id="post-job-form">
-      <h4>Post A Job</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-
-      <select class="form-select" id="professional-for-job" aria-label="Default select example">
-        <option value="" selected disabled>Professional</option>
-        <option value="1">Architect</option>
-        <option value="2">Interior designer</option>
-      </select>
-      <select class="form-select" id="=project-type-desired" aria-label="Default select example">
-        <option value="" selected disabled>Project Type</option>
-        <option value="1">Residential</option>
-        <option value="2">Commercial</option>
-        <option value="3">Office space</option>
-        <option value="4">Mixed Use</option>
-        <option value="5">Educational facility</option>
-        <option value="6">Health facility</option>
-      </select>
-
-      <input type="text" id="posted-job-title" placeholder="Enter project title" required>
-      <input type="text" id="posted-project-description" placeholder="Type Description here" required>
-      <input type="text" id="client-name" placeholder = "Enter client name" required>
-      <input type="email" id="client-email" placeholder = "Enter contact email" required>
-      <input type="text" id="job-location" placeholder="Job location" required>
-      <button class="submit-job-form">Submit</button>
-    </form>
-
-    <form action="" id="signup-form">
-      <h4>Signup</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <input type="text" id="signup-name" placeholder="Enter your name" class="professional-name"/>
-      <input type="email" id="signup-email" placeholder="Enter email" />
-      <input type="password" id="signup-password" placeholder="Enter password" />
-      <input type="password" id="signup-reEnter-password" placeholder="Re-enter password" />
-      <input type="text" id="signup-profile-photo" placeholder="Enter profile photo link" class="professional-dp">
-      <input type="text" id="signup-profession" placeholder="Enter your profession" class="profession-about">
-      <input type="text" id="signup-services" placeholder="Enter the services you offer" class="profession-services">
-      
-      <div class="signup-btn-field">
-        <button class="submit-signup-form" id="signup-btn">Sign Up</button>
-        <button class="disable" id="signin-btn">Sign In</button>
+  
+      <form action="" id="add-content-portfolio">
+        <h4>Add To Your Portfolio</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <input type="text" id="new-portfolio-project-type" placeholder="Enter project type">
+        <input type="text" id="add-portolio-project-title" placeholder="Enter project title" />
+        <input type="text" id="add-portolio-project-description" placeholder="Enter project description" />
+        <input type="text" id="add-portolio-project-image" placeholder="Enter image" />
+        <button class="submit-portolio-content">Submit</button>
+      </form>
+  
+      <form action="" id="educational-content-form">
+        <h4>Post Educational Content</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <input type="text" id="post-article-title" placeholder="Title">
+        <input type="text" id="post-article-image" placeholder="Link to post cover image">
+        <input type="text" id="post-article-description" placeholder="Enter short project description">
+        <input type="text" id="post-article-content" placeholder="Post content here">
+        <button class="submit-educational-articles">Post</button>
+      </form>
+  
+      <form id="update-educational-content">
+        <h4>Edit Educational Article</h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <input type="text" id="edit-title" placeholder="Edit title">
+        <input type="text" id="edit-description" placeholder="Edit description">
+        <input type="text" id="edit-content" placeholder="Edit Content">
+        <button id="edit-article-btn">Update</button>
+      </form>
+  
+      <div id="footer">
+        <p>© 2024 MuseMatch. All rights reserved.</p>
       </div>
-      
-    </form>
 
-    <form action="" id="add-content-portfolio">
-      <h4>Add To Your Portfolio</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <input type="text" id="new-portfolio-project-type" placeholder="Enter project type">
-      <input type="text" id="add-portolio-project-title" placeholder="Enter project title" />
-      <input type="text" id="add-portolio-project-description" placeholder="Enter project description" />
-      <input type="text" id="add-portolio-project-image" placeholder="Enter image" />
-      <button class="submit-portolio-content">Submit</button>
-    </form>
-
-    <form action="" id="educational-content-form">
-      <h4>Post Educational Content</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <input type="text" id="post-article-title" placeholder="Title">
-      <input type="text" id="post-article-image" placeholder="Link to post cover image">
-      <input type="text" id="post-article-description" placeholder="Enter short project description">
-      <input type="text" id="post-article-content" placeholder="Post content here">
-      <button class="submit-educational-articles">Post</button>
-    </form>
-
-    <form action="" id="login-form">
-      <h4>Log In</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <input type="text" id="login-email" placeholder="Enter email">
-      <input type="text" id="login-password" placeholder="Enter password">
-      <div id="login-btns">
-        <button id="login-submit">Sign In</button>
-        <button id="signup-redirect-btn">Sign up here</button>
-      </div>
-      
-    </form>
-
-    <form id="update-educational-content">
-      <h4>Edit Educational Article</h4>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <input type="text" id="edit-title" placeholder="Edit title">
-      <input type="text" id="edit-description" placeholder="Edit description">
-      <input type="text" id="edit-content" placeholder="Edit Content">
-      <button id="edit-article-btn">Update</button>
-    </form>
-
-    <div id="footer">
-      <p>© 2024 MuseMatch. All rights reserved.</p>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>

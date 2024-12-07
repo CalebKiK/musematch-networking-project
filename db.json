@@ -1,4 +1,38 @@
 {
+  "currentUser": [
+    {
+      "id": "",
+      "profileImage": "",
+      "signupName": "",
+      "userProfession": "",
+      "signupServices": "",
+      "signupEmail": "",
+      "signupPassword": "12345",
+      "portfolioImages": [
+        {
+          "imageUrl": "",
+          "projectTitle": "",
+          "projectDescription": ""
+        },
+        {
+          "imageUrl": "",
+          "projectTitle": "",
+          "projectDescription": ""
+        },
+        {
+          "imageUrl": "",
+          "projectTitle": "",
+          "projectDescription": ""
+        },
+        {
+          "imageUrl": "",
+          "projectTitle": "",
+          "projectDescription": ""
+        }
+      ]
+    }
+  ],
+
   "professionals": [
     {
       "id": "1",
@@ -277,6 +311,7 @@
       "userProfession": "Interior design",
       "signupServices": "Online interior design consultations, 3D renderings and virtual tours, remote project management, furniture and decor sourcing.",
       "signupEmail": "interior@gmail.com",
+      "signupPassword": "12345",
       "portfolioImages": [
         {
           "imageUrl": "Images/Projects/Chapel 1.jpg",
