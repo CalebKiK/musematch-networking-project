@@ -346,6 +346,7 @@
       "portfolioImages": []
     }
   ],
+
   "job-posts": [
     {
       "postedJobTitle": "Architectual Design, CAD Drawing, and Interior Design Assistant",
@@ -436,6 +437,7 @@
       "clientEmail": "james.anderson@example.com"
     }
   ],
+  
   "educational-articles": [
     {
       "newArticleImage": "Images/Articles/Article 01.jpg",

@@ -93,7 +93,7 @@ header a{
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 15px;
-    margin-left: 60px;
+    margin-left: 30px;
     font-size: 17px;
     font-weight: 500;
     padding: 5px 12px;
@@ -116,7 +116,7 @@ header a{
 }
 
 #hero-section{
-    margin-top: 110px;
+    margin-top: 150px;
     text-align: center;
     align-items: center;
 }
@@ -169,7 +169,7 @@ header a{
 .musematch-values{
     background-color: rgba(203, 247, 247, 0.325);
     width: 250px;
-    margin-right: 83px;
+    margin-right: 30px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -180,7 +180,7 @@ header a{
 }
 
 .musematch-values img{
-    width: 200px;
+    width: 140px;
     border-radius: 5px;
 }
 
@@ -189,8 +189,8 @@ li{
 }
 
 #chat-users {
-    width: 300px;
-    height: 600px;
+    width: 220px;
+    height: 500px;
     margin: 100px auto;
     padding: 20px;
     right: 0;
@@ -204,6 +204,7 @@ li{
     background-color: #049bafc5;
     padding: 10px;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 #user-list {
@@ -306,7 +307,7 @@ li{
 
 #professionals-results{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px 20px;
     margin: 0px 350px;
 }
@@ -322,7 +323,7 @@ li{
 #professionals-search-form input, #project-type-search-form input{
     height: 40px;
     margin-right: 10px;
-    width: 800px;
+    width: 850px;
 }
 
 #professionals-search-form i, #project-type-search-form i, #job-search-form i{
@@ -341,7 +342,8 @@ li{
     flex-direction: row;
     align-items: center;
     margin-bottom: -50px;
-    width: 1400px;
+    width: 1000px;
+    margin-left: 200px;
 }
 
 #job-search-form input{
@@ -385,8 +387,8 @@ li{
 
 .professional-card{
     margin-top: 30px;
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 340px;
     padding: 15px;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
@@ -398,7 +400,8 @@ li{
 
 .professional-info h6{
     text-align: left;
-    font-size: 15px;
+    font-size: 13px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -444,7 +447,7 @@ li{
 }
 
 .profile-text h6{
-    font-size: 14px;
+    font-size: 13px;
     background-color: rgb(230, 230, 230);
     padding: 10px;
     border-radius: 5px;
@@ -528,7 +531,7 @@ li{
     width: 900px;
     border-radius: 15px;
     background-color: white;
-    margin-left: 500px;
+    margin-left: 300px;
     margin-top: 20px;
     text-align: left;
     padding: 10px 20px;
@@ -553,21 +556,18 @@ li{
 
 #educational-articles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 1500px;
-    padding-left: 400px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 270px;
+    width: 1000px;
+}
+
+#educational-articles li{
+    margin-right: 30px;
 }
 
 #articles-title{
     display: flex;
     margin-left: 800px;
-}
-
-#article-content{
-    display: flex;
-    flex-direction: row;
-    margin-left: 400px;
-    width: 1000px;
 }
 
 #article-content li{
@@ -578,12 +578,12 @@ li{
 }
 
 #article{
-    width: 320px;
-    margin: 20px 20px 20px;
+    width: 300px;
+    margin: 20px 0px;
     text-align: left;
-    background-color: #cafaf52c;
+    background-color: #bef2ed3a;
     padding: 30px;
-    height: 500px;
+    height: 470px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -594,7 +594,12 @@ li{
 }
 
 #article h4{
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+#article p{
+    font-size: 14px;
 }
 
 #articles-title input{
@@ -630,7 +635,7 @@ li{
 
 .delete-article{
     color: rgb(178, 3, 3);
-    margin-left: 110px;
+    margin-left: 90px;
 }
 
 #educational-faqs{
@@ -641,8 +646,11 @@ li{
 
 #faq-question{
     width: 800px;
+    padding: 10px;
     text-align: left;
-    margin-left: 600px;
+    margin: 0px 0px 20px 400px;
+    border: 1px rgb(181, 181, 181) solid;
+    border-radius: 10px;
 }
 
 #login-form{
@@ -727,8 +735,8 @@ form button:hover{
     display: none;
     position: fixed;
     padding: 20px 80px;
-    margin-top: 200px;
-    margin-left: 600px;
+    margin-top: 100px;
+    margin-left: 400px;
     background-color: white;
 }
 
@@ -739,7 +747,7 @@ form button:hover{
 #professional-modal{
     display: none;
     background-color: white;
-    margin: 200px 400px 0px 500px;
+    margin: 100px 400px 0px 200px;
     border-radius: 10px;
     position: fixed;
     padding: 20px;
@@ -756,8 +764,8 @@ form button:hover{
 }
 
 #profile-part1 img, #profile-prt1 img{
-    height: 100px;
-    width: 120px;
+    height: 150px;
+    max-width: 170px;
     border-radius: 15px;
     margin: 0px 30px;
 }
@@ -771,7 +779,7 @@ form button:hover{
     text-align: left;
     padding: 10px;
     width: 820px;
-    height: 420px;
+    height: 380px;
     border-radius: 5px;
     margin: 10px;
 }
@@ -891,10 +899,6 @@ form button:hover{
     .menu-container a {
       margin: 10px 0;
     }
-  
-    /* button {
-      margin: 10px 0;
-    } */
 
     #hero-section{
         margin-top: 100px;
@@ -974,7 +978,7 @@ form button:hover{
     .professional-card{
         margin-top: 30px;
         width: 280px;
-        height: 300px;
+        height: 310px;
     }
 
     .professional-info h4{
@@ -1002,20 +1006,25 @@ form button:hover{
     .project-card{
         padding: 10px;
         margin: 10px 5px;
-        width: 200px;
+        width: 170px;
     }
     
     .project-card img{
-        width: 180px;
+        width: 150px;
         max-height: 200px;
+        border-radius: 5px;
     }
     
     .project-card h4{
-        font-size: 17px;
+        font-size: 15px;
     }
     
     .project-card h5{
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .project-card a{
+        font-size: 13px;
     }
 
     #posted-jobs{
@@ -1052,7 +1061,7 @@ form button:hover{
     }
     
     #job-search-form input{
-        width: 300px;
+        width: 250px;
         margin-right: 10px;
     }
 
@@ -1108,6 +1117,7 @@ form button:hover{
 
     #article button{
         font-size: 14px;
+        margin-top: 5px;
     }
 
     .delete-article{

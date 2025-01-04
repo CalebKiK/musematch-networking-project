@@ -10,20 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const modalClose = document.getElementsByClassName("btn-close");
 
-  const viewProfileBtns = document.querySelectorAll(".view-profile-btn");
-
   const userAuthenticationContainer = document.getElementById("user-authentication")
   const signupForm = document.getElementById("signup-form");
   const signupBtn = document.querySelector(".signup-btn");
   const loginForm = document.getElementById("logIn-form");
-  const userProfileBtn = document.getElementById("user-profile-btn");
-  let signupPassword = document.getElementById("signup-password").value;
 
   const userProfileInfo = document.getElementById("professional-profile-modal");
-  const profileModalContent = document.getElementById("modal-content");
   const updatePortfolio = document.getElementById("add-content-portfolio");
 
   const websiteContent = document.getElementById("website-content");
+
+  let allData = {};
+
+  fetch("db.json")
+  .then(response => response.json())
+  .then(data => {
+    allData = data;
+    displayProfessionals(data.professionals);
+    displayProjectTypes(data.professionals);
+    displayAvailableJobs(data["job-posts"]);
+    displayEducationalArticles(data["educational-articles"]);
+  })
+  .catch(error => {console.error("Error loading db.json:", error)});
 
   const hamburgerIcon = document.getElementById('hamburger-icon');
   const menuContainer = document.querySelector('.menu-container');
@@ -242,15 +250,6 @@ async function updateUI() {
     const profileModal = document.createElement("div");
     modalClose.classList.add("profile-modal");
 
-    // let profileItems = "";
-    //   profileItems += `
-    //     <div class="portfolio-item">
-    //     <img src="${user.imageUrl}" alt="${user.projectTitle}">
-    //       <h5>${user.projectTitle}</h5>
-    //       <p>${user.projectDescription}</p>
-    //     </div>`;
-    // ;
-
     profileModal.innerHTML = `
     <div class="profile-modal-content">
       <button type="button" class="btn-close" aria-label="Close"></button>
@@ -280,23 +279,12 @@ async function updateUI() {
       profileModal.appendChild(updateProfileBtn);
       profileModal.appendChild(deleteAccountBtn);
 
-      
-
       modal.querySelector('.close').addEventListener('click', () => {
         document.body.removeChild(modal);
     });
   }
 
   document.getElementById("user-profile-btn").addEventListener("click", showUserProfile);
-
-  // document.getElementById("signup-profile-photo").addEventListener("click", function() {
-  //   showUserProfile({
-  //     profileImage: this.value,
-  //     signupName: document.getElementById("signup-name").value,
-  //     userProfession: document.getElementById("signup-profession").value,
-  //     signupServices: document.getElementById("signup-services").value
-  //   });
-  // });
 
 // Function to GET the professionals profile
   function fetchProfessionalProfile() {
@@ -309,36 +297,32 @@ async function updateUI() {
   }
 
   // Function to dynamically display professionals and some of their details
-  function displayProfessionals() {
-    fetch("http://localhost:3000/professionals")
-      .then((response) => response.json())
-      .then((data) => {
-        professionalsSection.innerHTML = "";
+  function displayProfessionals(professionalsData) {
+    
+    professionalsSection.innerHTML = "";
 
-        data.forEach((item) => {
-          const professionalCard = document.createElement("li");
+    professionalsData.forEach((item) => {
+      const professionalCard = document.createElement("li");
 
-          professionalCard.innerHTML = `
-                <div class="professional-card">
-                  <img src="${item.profileImage}" alt="${item.signupName}">
-                  <div class="professional-info">
-                    <h4>${item.signupName}</h4>
-                    <h5>${item.userProfession}</h5>
-                    <h6>${item.signupServices}</h6>
-                    <button class="view-profile-btn" data-id="${item.id}">View profile</button>
-                  </div>
-                </div>
-              `;
+      professionalCard.innerHTML = `
+        <div class="professional-card">
+          <img src="${item.profileImage}" alt="${item.signupName}">
+          <div class="professional-info">
+            <h4>${item.signupName}</h4>
+            <h5>${item.userProfession}</h5>
+            <h6>${item.signupServices}</h6>
+            <button class="view-profile-btn" data-id="${item.id}">View profile</button>
+          </div>
+        </div>
+      `;
 
-          professionalsSection.appendChild(professionalCard);
-        });
+      professionalsSection.appendChild(professionalCard);
+    });
 
-        const viewProfileBtns = document.querySelectorAll(".view-profile-btn");
-        viewProfileBtns.forEach((btn) => {
-          btn.addEventListener("click", openProfileModal);
-        });
-      })
-      .catch((error) => console.error("Error fetching professional:", error));
+    const viewProfileBtns = document.querySelectorAll(".view-profile-btn");
+    viewProfileBtns.forEach((btn) => {
+      btn.addEventListener("click", openProfileModal);
+    });
   };
 
   // Function to show the professionals' details individually
@@ -346,17 +330,21 @@ async function updateUI() {
     event.preventDefault();
     const professionalId = event.target.getAttribute("data-id");
 
-    fetch(`http://localhost:3000/professionals/${professionalId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        professionalModalOpen.style.display = "block";
+    const professional = allData.professionals.find(
+      (prof) => prof.id === professionalId
+    );
 
-        let porfolioMessageBtn = document.createElement("button");
-        porfolioMessageBtn.textContent = "Message professional";
-        porfolioMessageBtn.className = "portfolio-message-btn";
+    if (professional) {
+      professionalModalOpen.style.display = "block";
 
-        let portfolioItems = "";
-        data.portfolioImages.forEach((image) => {
+      let porfolioMessageBtn = document.createElement("button");
+      porfolioMessageBtn.textContent = "Message professional";
+      porfolioMessageBtn.className = "portfolio-message-btn";
+
+      let portfolioItems = "";
+
+      if (professional.portfolioImages && professional.portfolioImages.length > 0) {
+        professional.portfolioImages.forEach((image) => {
           portfolioItems += `
                 <div class="portfolio-item">
                   <img src="${image.imageUrl}" alt="${image.projectTitle}">
@@ -364,74 +352,73 @@ async function updateUI() {
                   <p>${image.projectDescription}</p>
                 </div>`;
         });
-
-        professionalModalOpen.innerHTML = `
-              <button type="button" class="btn-close" aria-label="Close"></button>
-              <div id="profile-part1">
-                <img src="${data.profileImage}" alt="${data.signupName}">
-                <div class="profile-text">
-                  <h4>${data.signupName}</h4>
-                  <h5>${data.userProfession}</h5>
-                  <p>${data.signupServices}</p>
-                  <h6>${data.signupEmail}</h6>
-                </div>
+      } else {
+        portfolioItems = "<p>No portfolio images available.</p>"
+      }
+      
+      professionalModalOpen.innerHTML = `
+            <button type="button" class="btn-close" aria-label="Close"></button>
+            <div id="profile-part1">
+              <img src="${professional.profileImage}" alt="${professional.signupName}">
+              <div class="profile-text">
+                <h4>${professional.signupName}</h4>
+                <h5>${professional.userProfession}</h5>
+                <p>${professional.signupServices}</p>
+                <h6>${professional.signupEmail}</h6>
               </div>
-              <div id="profile-part2">
-                <div class="portfolio">${portfolioItems}</div>
-              </div>
-            `;
+            </div>
+            <div id="profile-part2">
+              <div class="portfolio">${portfolioItems}</div>
+            </div>
+          `;
 
-        professionalModalOpen.appendChild(porfolioMessageBtn);
+      professionalModalOpen.appendChild(porfolioMessageBtn);
 
-        const closeModalBtn = professionalModalOpen.querySelector(".btn-close");
-        closeModalBtn.addEventListener("click", () => {
-          professionalModalOpen.style.display = "none";
-        });
-      })
-      .catch((error) =>
-        console.error("Error fetching professional profile:", error)
-      );
+      const closeModalBtn = professionalModalOpen.querySelector(".btn-close");
+      closeModalBtn.addEventListener("click", () => {
+        professionalModalOpen.style.display = "none";
+      });
+    } else {
+      console.error("Professional not found")
+    } 
   };
 
 // A function that displays the different projects on the website
-  function displayProjectTypes() {
-    fetch("http://localhost:3000/professionals")
-      .then((response) => response.json())
-      .then((data) => {
-        const projectTypeContainer = document.getElementById("project-type-results");
-        projectTypeContainer.innerHTML = "";
+  function displayProjectTypes(professionalsData) {
+    
+    const projectTypeContainer = document.getElementById("project-type-results");
+    projectTypeContainer.innerHTML = "";
 
-        data.forEach((professional) => {
-          professional.portfolioImages.forEach((image) => {
-            const projectCard = document.createElement("div");
-            projectCard.className = "project-card";
+    professionalsData.forEach((professional) => {
+      professional.portfolioImages.forEach((image) => {
+        const projectCard = document.createElement("div");
+        projectCard.className = "project-card";
 
-            const img = document.createElement("img");
-            img.src = image.imageUrl;
-            img.alt = image.projectTitle;
+        const img = document.createElement("img");
+        img.src = image.imageUrl;
+        img.alt = image.projectTitle;
 
-            const title = document.createElement("h4");
-            title.textContent = image.projectTitle;
+        const title = document.createElement("h4");
+        title.textContent = image.projectTitle;
 
-            const description = document.createElement("h5");
-            description.textContent = image.projectDescription;
+        const description = document.createElement("h5");
+        description.textContent = image.projectDescription;
 
-            const accountName = document.createElement("a");
-            accountName.href = "#";
-            accountName.textContent = professional.signupName;
-            accountName.setAttribute("data-id", professional.id);
-            accountName.addEventListener("click", openProfileModal);
+        const accountName = document.createElement("a");
+        accountName.href = "#";
+        accountName.textContent = professional.signupName;
+        accountName.setAttribute("data-id", professional.id);
+        accountName.addEventListener("click", openProfileModal);
 
-            projectCard.appendChild(img);
-            projectCard.appendChild(title);
-            projectCard.appendChild(description);
-            projectCard.appendChild(accountName);
+        projectCard.appendChild(img);
+        projectCard.appendChild(title);
+        projectCard.appendChild(description);
+        projectCard.appendChild(accountName);
 
-            projectTypeContainer.appendChild(projectCard);
-          });
-        });
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+        projectTypeContainer.appendChild(projectCard);
+      });
+    });
+      
   }
 
   // Function to display post job form when button is clicked on
@@ -472,35 +459,30 @@ async function updateUI() {
   document.querySelector(".post-article").addEventListener("click", displayEducationalArticleForm);
 
 // Function to display available jobs
-  function displayAvailableJobs() {
-    fetch("http://localhost:3000/job-posts")
-      .then((response) => response.json())
-      .then((data) => {
-        availableJobsSection.innerHTML = "";
+  function displayAvailableJobs(jobPosts) {
+    availableJobsSection.innerHTML = "";
 
-        data.forEach((item) => {
-          let postedJobCard = document.createElement("li");
+    jobPosts.forEach((item) => {
+      let postedJobCard = document.createElement("li");
 
-          postedJobCard.innerHTML = `
-                    <div class="job-post">
-                      <div class="job-header">
-                        <h4 class="job-edit">${item.postedJobTitle}</h4>
-                        <p>${item.jobLocation}</p>
-                      </div> 
-                        <p class="job-edit">${item.postedJobDescription}</p>
-                        <h6>${item.clientName}</h6>
-                        <p>${item.clientEmail}</p>
-                        <button class="edit-job-btn" data-id="${item.id}">Edit</button>
-                        <button class="delete-job-btn" data-id="${item.id}">Delete</button>
-                    </div>
-                `;
-          availableJobsSection.appendChild(postedJobCard);
+      postedJobCard.innerHTML = `
+            <div class="job-post">
+              <div class="job-header">
+                <h4 class="job-edit">${item.postedJobTitle}</h4>
+                <p>${item.jobLocation}</p>
+              </div> 
+                <p class="job-edit">${item.postedJobDescription}</p>
+                <h6>${item.clientName}</h6>
+                <p>${item.clientEmail}</p>
+                <button class="edit-job-btn" data-id="${item.id}">Edit</button>
+                <button class="delete-job-btn" data-id="${item.id}">Delete</button>
+            </div>
+        `;
+      availableJobsSection.appendChild(postedJobCard);
 
-          postedJobCard.querySelector(".edit-job-btn").addEventListener("click", () => editJob(item));
-          postedJobCard.querySelector(".delete-job-btn").addEventListener("click", () => deleteJob(item.id));
-        });
-      })
-      .catch((error) => console.error("Error fetching job:", error));
+      postedJobCard.querySelector(".edit-job-btn").addEventListener("click", () => editJob(item));
+      postedJobCard.querySelector(".delete-job-btn").addEventListener("click", () => deleteJob(item.id));
+    });
   };
 
   // Function to edit content on available jobs
@@ -551,33 +533,29 @@ async function updateUI() {
 };
 
 // Function to display educational content
-  function displayEducationalArticles() {
-    fetch("http://localhost:3000/educational-articles")
-      .then((response) => response.json())
-      .then((data) => {
-        const educationalArticles = document.getElementById("educational-articles");
-        educationalArticles.innerHTML = "";
+  function displayEducationalArticles(educationalArticle) {
+    
+    const educationalArticles = document.getElementById("educational-articles");
+    educationalArticles.innerHTML = "";
 
-        data.forEach((item) => {
-          let articleCard = document.createElement("li");
+    educationalArticle.forEach((item) => {
+      let articleCard = document.createElement("li");
 
-          articleCard.innerHTML = `
-                <div id="article">
-                    <img src="${item.newArticleImage}" alt="" />
-                    <h4 class="editable-article">"${item.newArticleTitle}"</h4>
-                    <p class= "editable-article">"${item.newArticleDescription}"</p>
-                    <button class="update-article" data-id="${item.id}">Update</button>
-                    <button class="delete-article" data-id="${item.id}">Delete</button>
-                </div>
-                `;
-          
-          educationalArticles.appendChild(articleCard);
+      articleCard.innerHTML = `
+          <div id="article">
+              <img src="${item.newArticleImage}" alt="" />
+              <h4 class="editable-article">"${item.newArticleTitle}"</h4>
+              <p class= "editable-article">"${item.newArticleDescription}"</p>
+              <button class="update-article" data-id="${item.id}">Update</button>
+              <button class="delete-article" data-id="${item.id}">Delete</button>
+          </div>
+          `;
+      
+      educationalArticles.appendChild(articleCard);
 
-          articleCard.querySelector(".update-article").addEventListener("click", () => editArticle(item));
-          articleCard.querySelector(".delete-article").addEventListener("click", () => deleteArticle(item.id));
-        });
-      })
-      .catch((error) => console.error("Error fetching articles:", error));
+      articleCard.querySelector(".update-article").addEventListener("click", () => editArticle(item));
+      articleCard.querySelector(".delete-article").addEventListener("click", () => deleteArticle(item.id));
+    });
 };
 
 // Function to edit educational content
